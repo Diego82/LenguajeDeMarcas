@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://lmsgi.iesvirgendelcarmen.com"
+xmlns="http://lmsgi.iesvirgendelcarmen.com"
+elementFormDefault="qualified">
+	<xs:element name="info_accidentes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="evento" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="tipo" type="xs:string" />
+							<xs:element name="pk" type='xs:decimal' />
+							<xs:element name="n_via" type="xs:string" />
+							<xs:element name="sentido" type="xs:string" />
+							<xs:element name="corte" type="xs:boolean" />
+							<xs:element name="fecha" type="xs:date" />
+							<xs:element name="hora" type='xs:time' />
+							<xs:element name="retencion" type="xs:boolean" />
+							<xs:element name="km_retencion" type='xs:decimal' />
+						</xs:sequence>
+						<xs:attribute name="id" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

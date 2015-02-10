@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<info_meteoro xmlns="http://lmsgi.iesvirgendelcarmen.com"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://lmsgi.iesvirgendelcarmen.com te01ej03.xsd">
+	<prediccion lugar="Jaén" fecha="2015-06-01">
+		<pro_pre> 10 </pro_pre>
+		<cielo>Despejado</cielo>
+		<viento dir="Suroeste" vel="10" />
+		<temperatura>21</temperatura>
+		<sensacion_ter>21</sensacion_ter> 
+		<humedad>90</humedad>
+		<ultravioleta>3</ultravioleta>
+	</prediccion>
+</info_meteoro>

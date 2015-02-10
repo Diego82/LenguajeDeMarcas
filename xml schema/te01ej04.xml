@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura xmlns="http://lmsgi.iesvirgendelcarmen.com"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://lmsgi.iesvirgendelcarmen.com te01ej04.xsd">
+	<cliente>
+		<dni>77332216Y</dni>
+		<nombre>Diego Torres</nombre>
+		<direccion>Av Andalucia</direccion>
+		<cp>23005</cp>
+		<poblacion>Jaén</poblacion>
+	</cliente>
+
+	<pedido>
+		<producto id="92332" precio="50" nombre="Disco duro HDD" iva="21" desc="3" cantidad="4" />
+		<producto id="23332" precio="80" nombre="Disco duro SSD" iva="21" desc="3" cantidad="4" />
+	</pedido>
+
+</factura>

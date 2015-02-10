@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://lmsgi.iesvirgendelcarmen.com"
+xmlns="http://lmsgi.iesvirgendelcarmen.com"
+elementFormDefault="qualified">
+
+	<xs:element name="pro_pre" >
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+			  <xs:minInclusive value="0"/>
+			  <xs:maxInclusive value="100"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="cielo">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="Despejado"/>
+				<xs:enumeration value="Nublado"/>
+				<xs:enumeration value="Parcialmente nublado"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	
+	<xs:element name="viento" >
+		 <xs:complexType>
+			<xs:attribute name="dir">
+				<xs:simpleType>
+				 <xs:restriction base="xs:string">					
+					  <xs:enumeration value="Norte"/>
+					  <xs:enumeration value="Sur"/>
+					  <xs:enumeration value="Este"/>
+					  <xs:enumeration value="Oeste"/>
+					  <xs:enumeration value="Noreste"/>
+					  <xs:enumeration value="Noroeste"/>
+					  <xs:enumeration value="Sureste"/>
+					  <xs:enumeration value="Suroeste"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		
+			<xs:attribute name="vel">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="0"/>
+						<xs:maxInclusive value="200"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="temperatura" >
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+			  <xs:minInclusive value="-100"/>
+			  <xs:maxInclusive value="100"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	
+	<xs:element name="sensacion_ter" >
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+			  <xs:minInclusive value="-100"/>
+			  <xs:maxInclusive value="100"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	
+	<xs:element name="humedad" >
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+			  <xs:minInclusive value="0"/>
+			  <xs:maxInclusive value="100"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	
+	<xs:element name="ultravioleta" >
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+			  <xs:minInclusive value="1"/>
+			  <xs:maxInclusive value="100"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	
+	<!-- Aqui referencio las etiquetas -->
+	
+	<xs:element name="prediccion" >
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="pro_pre" />
+				<xs:element ref="cielo" />
+				<xs:element ref="viento" />
+				<xs:element ref="temperatura" />
+				<xs:element ref="sensacion_ter" />
+				<xs:element ref="humedad" />
+				<xs:element ref="ultravioleta" />
+			</xs:sequence>
+			<xs:attribute name="lugar" type="xs:string" />
+			<xs:attribute name="fecha" type="xs:date" />
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="info_meteoro">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="prediccion" minOccurs="1" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<info_accidentes xmlns="http://lmsgi.iesvirgendelcarmen.com"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://lmsgi.iesvirgendelcarmen.com te01ej02.xsd">
+	<evento id="1">
+		<tipo>Señal de Accidente</tipo>
+		<pk>42.5</pk>
+		<n_via>A-49</n_via>
+		<sentido>Huelva</sentido>
+		<corte>false</corte>
+		<fecha>2015-01-16</fecha>
+		<hora>12:00:00</hora>
+		<retencion>true</retencion>
+		<km_retencion>8</km_retencion>
+	</evento>
+	
+	<evento id="2">
+		<tipo>Retención</tipo>
+		<pk>550.5</pk>
+		<n_via>A-4</n_via>
+		<sentido>Sevilla</sentido>
+		<corte>false</corte>
+		<fecha>2015-01-16</fecha>
+		<hora>12:30:00</hora>
+		<retencion>false</retencion>
+		<km_retencion>0</km_retencion>
+	</evento>
+</info_accidentes>

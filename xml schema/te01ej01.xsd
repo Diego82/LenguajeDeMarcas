@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://lmsgi.iesvirgendelcarmen.com"
+xmlns="http://lmsgi.iesvirgendelcarmen.com"
+elementFormDefault="qualified">
+	<xs:element name="svg">
+		<xs:complexType>
+			<xs:sequence>
+
+				<xs:element name="circle">
+					<xs:complexType>
+						<xs:attribute name="cx" type="xs:string" use="required" />
+						<xs:attribute name="cy" type="xs:string" use="required" />
+						<xs:attribute name="r" type="xs:string" use="required" />
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="rect">
+					<xs:complexType>
+						<xs:attribute name="x" type="xs:string" use="required" />
+						<xs:attribute name="y"  type="xs:string" use="required"/>
+						<xs:attribute name="width" type="xs:string" use="required" />
+						<xs:attribute name="height" type="xs:string" use="required" />
+					</xs:complexType>
+				</xs:element>			
+				
+				<xs:element name="line">
+					<xs:complexType>
+						<xs:attribute name="x1" type="xs:string" use="required" />
+						<xs:attribute name="y1" type="xs:string" use="required" />
+						<xs:attribute name="x2" type="xs:string" use="required" />
+						<xs:attribute name="y2" type="xs:string" use="required" />
+						<xs:attribute name="style" type="xs:string" use="required" />
+					</xs:complexType>				
+				</xs:element>
+				
+				<xs:element name="svg">
+					<xs:complexType>
+						<xs:element ref="circle" minOccurs="0" maxOccurs="unbounded" />
+						<xs:element ref="rect" minOccurs="0" maxOccurs="unbounded" />
+						<xs:element ref="line" minOccurs="0" maxOccurs="unbounded" />
+					</xs:complexType>
+
+				</xs:element>
+			</xs:sequence>		
+			<xs:attribute name="width" />
+			<xs:attribute name="height" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
