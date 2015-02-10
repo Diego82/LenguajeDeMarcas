@@ -20,4 +20,5 @@ function procesar(miObjeto){
 	};
 	resultado+= "</ol>\n";
 	nodo.innerHTML += resultado;
+	/*probando*/
 }
