@@ -1,5 +1,5 @@
 	
-	nodo.innerHTML += "<br/> Procesando "+miObjeto.query.count+" noticias<br/><br/>";
+	// nodo.innerHTML += "<br/> Procesando "+miObjeto.query.count+" noticias<br/><br/>";
 
 function cargaJSON(){
 	$.getJSON("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%3D%22"+document.getElementById("formulario").value+"%22&format=json&diagnostics=true&callback=",procesar);
